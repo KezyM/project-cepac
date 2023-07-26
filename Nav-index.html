@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nav-index</title>
+<link href="Nav-style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+	
+	<!-- Header -->
+    <header class="header">
+      <img src="logo.png" alt="Logo" class="logo">
+      <nav class="navigation">
+        <ul>
+          <li><a href="#">About</a></li>
+          <li class="dropdown">
+            <a href="#">Upcoming Events</a>
+            <div class="dropdown-content">
+              <a href="#">item1</a>
+              <a href="#">item2</a>
+              <a href="#">item3</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">News</a>
+            <div class="dropdown-content">
+              <a href="#">item1</a>
+              <a href="#">item2</a>
+              <a href="#">item3</a>
+            </div>
+          </li>
+          <li><a href="#">Reports</a></li>
+        </ul>
+      </nav>
+		 <div class="headbuttons">
+      <button class="login-button">Login</button>
+      <button class="contact-button">Contact</button>
+		 </div>
+    </header>
+<hr>
+		<div class="marquee-container">
+			<p class="marquee-text">Upcoming Events and News</p>
+		</div>	
+	<br>
+	
+	<div class="Hero">
+	<!-- Section1 -->
+      <div class="section1">
+        <h1>CEPA COUNCIL</h1>
+        <h3>UAE-India</h3>
+
+		<div class="buttons-container">
+        <button class="button2">Primary Button</button>
+        <button class="button1">Secondary Button</button>
+		</div>
+        
+		 <div class="gallery-wrap">
+		<img src="back.png" id="backBtn">
+	<div class="gallery">
+		<div>
+			<span><img src="image1.jpg"></span>
+			<span><img src="image2.jpg"></span>
+			<span><img src="image3.jpg"></span>
+		</div>
+		<div>
+			<span><img src="image4.jpg"></span>
+			<span><img src="image5.jpg"></span>
+			<span><img src="image6.jpg"></span>
+		</div>
+	</div>
+		<img src="next.png" id="nextBtn">
+	</div>
+		  
+		  
+      </div>
+	<!-- Section2 -->
+      <div class="section2">
+        <h2>Lorem Ipsum</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="cards">
+          <div class="card">
+            <i class="fa fa-user" id="fa-user" aria-hidden="true" ></i>
+			<p>Lorem Ipsum</p>
+            <h4>Icon</h4>
+          </div>
+          <div class="card">
+            <i class="fa fa-user" id="fa-user" aria-hidden="true" ></i>
+			<p>Lorem Ipsum</p>
+            <h4>Icon</h4>
+          </div>
+          <div class="card">
+            <i class="fa fa-user" id="fa-user" aria-hidden="true" ></i>
+			<p>Lorem Ipsum</p>
+            <h4>Icon</h4>
+          </div>
+          <div class="card">
+            <i class="fa fa-user" id="fa-user" aria-hidden="true" ></i>
+			<p>Lorem Ipsum</p>
+            <h4>Icon</h4>
+          </div>
+        </div>
+      </div>
+		</div>
+	<footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum, tortor eget tristique hendrerit, neque odio fringilla arcu.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Information</h3>
+        <p>Email: contact@gmail.com</p>
+        <p>Phone: +1 (123) 456-7890</p>
+        <p>Address: Delhi, India</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Testimonials</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; CEPA Council 2023. All rights reserved.</p>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Cookie Policy</a></li>
+      </ul>
+    </div>
+  </footer>
+
+	
+	
+<script>
+	
+		let scrollContainer = document.querySelector(".gallery");
+		let backBtn = document.getElementById("backBtn");
+		let nextBtn = document.getElementById("nextBtn");
+		
+		scrollContainer.addEventListener("wheel", (evt) => {
+			evt.preventDefault();
+			scrollContainer.scrollLeft += evt.deltaY;
+			scrollContainer.style.scrollBehavior = "auto";
+		});
+		
+		nextBtn.addEventListener("click", ()=>{
+			scrollContainer.style.scrollBehavior = "smooth";
+			scrollContainer.scrollLeft += 900;
+		});
+		
+		backBtn.addEventListener("click", ()=>{
+			scrollContainer.style.scrollBehavior = "smooth";
+			scrollContainer.scrollLeft -= 900;
+		});
+	
+	</script>	
+</body>
+</html>
